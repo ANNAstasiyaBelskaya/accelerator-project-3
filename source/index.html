@@ -151,8 +151,124 @@
       <div class="hero-slider__controls swiper-pagination">
       </div>
     </section>
-    <div data-test="about">about</div>
-    <div data-test="programs">programs</div>
+    <section class="about" data-test="about">
+      <h2 class="about__title">О проекте «Стажировка»</h2>
+      <div class="about__content">
+        <p>«Стажировка» — совместный проект
+          правительств и волонтёрских бригад.</p>
+        <h3>Наша цель</h3>
+        <p>Наша деятельность направлена
+          на повышение квалификации молодых
+          специалистов на ранних и средних
+          стадиях карьеры, предоставляя
+          им инструменты для решения сложных
+          проблем, с которыми сталкиваются в мире.
+          Цель центра — наделить этих людей
+          способностью инициировать значимые
+          изменения.</p>
+        <button class="about__modal-button button" type="submit">подробнее о проекте</button>
+        <div class="modal">
+          <div class="modal__content">
+            <button class="modal__close-button" type="button">
+              <span class="visually-hidden">Закрыть</span>
+              <svg width="16" height="16">
+                <use href="/__spritemap#sprite-cross"></use>
+              </svg>
+            </button>
+            <h2 class="modal__title">Напишите нам</h2>
+            <p class="modal__description">Оставьте ваши контакты,<br> если у вас остались вопросы — мы на них ответим!</p>
+            <form class="modal__form" action="https://echo.htmlacademy.ru/" method="post">
+              <div class="modal__form-input">
+                <label for="name">Имя</label>
+                <input type="text" name="name" id="name">
+              </div>
+              <div class="modal__form-input">
+                <label for="phone">Телефон</label>
+                <input class="modal__form-input-phone" type="tel" name="phone" id="phone">
+              </div>
+              <div class="modal__form-input">
+                <label for="city-select">Выберите город</label>
+                <select aria-label="Выберите город" name="city" id="city-select">
+                  <option value=""></option>
+                  <option value="Москва">Москва</option>
+                  <option value="Санкт-Петербург">Санкт-Петербург</option>
+                </select>
+              </div>
+              <div class="modal__form-checkbox">
+                <input class="visually-hidden" type="checkbox" name="data-processing-consent" id="data-processing-consent" required>
+                <span class="modal__form-checkbox-mark">
+                  <svg width="10" height="10">
+                    <use href="/__spritemap#sprite-checkmark"></use>
+                  </svg>
+                </span>
+                <label for="data-processing-consent">Я согласен на обработку моих персональных данных</label>
+              </div>
+              <button class="modal__submit-button button" type="submit">Отправить</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <ul class="about__list">
+        <li class="about__list-item">
+          <h4 class="about__list-item-title">Более 250 программ</h4>
+          <p class="about__list-item-description">учебных и рабочих, разной
+            длительностью от 3 месяцев
+            до 1 года</p>
+        </li>
+        <li class="about__list-item">
+          <h4 class="about__list-item-title">Более 3000 участников</h4>
+          <p class="about__list-item-description">уже успешно прошли программу от «Стажировка» и остались в разных странах</p>
+        </li>
+        <li class="about__list-item">
+          <h4 class="about__list-item-title">участники из 60 стран</h4>
+          <p class="about__list-item-description">студенты со всего мира приезжают на программу
+            «Стажировки» от 3 месяцев до 1 года</p>
+        </li>
+        <li class="about__list-item">
+          <h4 class="about__list-item-title">от 4 200 $<br>
+            до 8 400 $</h4>
+          <p class="about__list-item-description">грант всем участникам
+            для комфортного прохождения
+            программы</p>
+        </li>
+      </ul>
+    </section>
+    <section class="programs" data-test="programs">
+      <h2 class="programs__title">Программы</h2>
+      <div class="programs__slider-wrapper swiper-wrapper">
+
+        <div class="programs__slide swiper-slide">
+          <picture></picture>
+          <div class="programs__slide-inner">
+            <h3 class="programs__slide-title">Стажировки</h3>
+            <div class="programs__slide-description-container">
+              <p>Получите незаменимый опыт работы в крупнейших мировых компаниях.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="programs__slide swiper-slide">
+          <picture></picture>
+          <div class="programs__slide-inner">
+            <h3 class="programs__slide-title">Волонтёрство</h3>
+            <div class="programs__slide-description-container">
+              <p>Помогайте другим и развивайте свои лидерские качества</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="programs__slide swiper-slide">
+          <picture></picture>
+          <div class="programs__slide-inner">
+            <h3 class="programs__slide-title">Учёба</h3>
+            <div class="programs__slide-description-container">
+              <p>Получите образование и измените своё будущее.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="programs__button button" href="#">все программы</a>
+    </section>
     <div data-test="grant">grant</div>
     <div data-test="news">news</div>
     <div data-test="FAQ">FAQ</div>

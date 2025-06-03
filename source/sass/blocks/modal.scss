@@ -1,0 +1,140 @@
+.modal {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--overlay-color, $overlay-color);
+  z-index: 3;
+}
+
+.modal__content {
+  position: relative;
+  display: block;
+  margin: 23px auto;
+  padding: 40px 15px;
+  width: 290px;
+  box-sizing: border-box;
+  background-color: var(--secondary-color, $secondary-color);
+  border-radius: 16px;
+  z-index: 4;
+}
+
+.modal__close-button {
+  position: absolute;
+  content: "";
+  padding: 0;
+  width: 16px;
+  height: 16px;
+  top: 20px;
+  right: 20px;
+  border: none;
+  background-color: transparent;
+}
+
+.modal__title {
+  @include font(18px, 18px, 400);
+
+  margin: 0;
+  margin-bottom: 15px;
+  color: var(--accent-color, $secondary-color);
+  text-align: center;
+}
+
+.modal__description {
+  @include font (14px, 20px, 400);
+
+  margin: 0;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.modal__form {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 15px;
+}
+
+.modal__form-input {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 8px;
+}
+
+.modal__form label {
+  @include font(14px, 14px, 400);
+
+  opacity: 0.8;
+}
+
+.modal__form input,
+.modal__form select {
+  margin: 0;
+  min-height: 44px;
+  box-sizing: border-box;
+  border: 1px solid rgba(72, 72, 72, 0.3);
+  border-radius: 8px;
+}
+
+.modal__form-checkbox {
+  position: relative;
+  padding-left: 30px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.modal__form-checkbox-mark {
+  position: absolute;
+  content: "";
+  display: grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background-color: var(--secondary-color, $secondary-color);
+  border: 1px solid var(--accent-color, $accent-color);
+  border-radius: 2px;
+  fill: none;
+  stroke: none;
+  opacity: 0.7;
+}
+
+
+.modal__submit-button {
+  margin-top: 10px;
+}
+
+.modal__form-checkbox input:hover + .modal__form-checkbox-mark,
+.modal__form-checkbox input + .modal__form-checkbox-mark:hover,
+.modal__form-checkbox input:focus + .modal__form-checkbox-mark,
+.modal__form-checkbox input + .modal__form-checkbox-mark:focus {
+  opacity: 1;
+}
+
+.modal__form-checkbox input:disabled + .modal__form-checkbox-mark {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.modal__form-checkbox input:checked + .modal__form-checkbox-mark {
+  background-color: var(--accent-color, $accent-color);
+  stroke: var(--secondary-color, $secondary-color);
+  opacity: 1;
+}
+
+.modal__form-checkbox input:checked:hover + .modal__form-checkbox-mark,
+.modal__form-checkbox input:checked + .modal__form-checkbox-mark:hover,
+.modal__form-checkbox input:checked:focus + .modal__form-checkbox-mark,
+.modal__form-checkbox input:checked + .modal__form-checkbox-mark:focus {
+  background-color: var(--secondary-color, $secondary-color);
+  stroke: var(--accent-color, $accent-color);
+  opacity: 1;
+}
+
+.modal__form-checkbox input:checked:disabled + .modal__form-checkbox-mark {
+  background-color: var(--disabled-element-color, $disabled-element-color);
+  stroke: rgba(255, 255, 255, 0.7);
+  opacity: 1;
+}

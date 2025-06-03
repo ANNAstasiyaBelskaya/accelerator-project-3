@@ -20,7 +20,7 @@ body {
   margin: 0 auto;
   min-width: 320px;
   min-height: 100vh;
-
+  color: var(--primary-color, $primary-color);
   font-family: $base-font;
   cursor: default;
 
