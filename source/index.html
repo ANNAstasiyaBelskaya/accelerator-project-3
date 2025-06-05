@@ -234,35 +234,82 @@
       </ul>
     </section>
     <section class="programs" data-test="programs">
-      <h2 class="programs__title">Программы</h2>
+      <div class="programs__inner-container">
+        <h2 class="programs__title">Программы</h2>
+        <div class="programs__slider-controls">
+          <button class="programs__slider-control-button swiper-button-prev" type="button" aria-label="Перейти к предыдущему слайду">
+            <svg width="10" height="10">
+              <use href="/__spritemap#sprite-arrow-left"></use>
+            </svg>
+          </button>
+          <button class="programs__slider-control-button swiper-button-next" type="button" aria-label="Перейти к следующему слайду">
+            <svg width="10" height="10">
+              <use href="/__spritemap#sprite-arrow-right"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
       <div class="programs__slider-wrapper swiper-wrapper">
-
         <div class="programs__slide swiper-slide">
-          <picture></picture>
-          <div class="programs__slide-inner">
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)" width="392" height="420" srcset="img/blocks/programs/internship-desktop.webp 1x, img/blocks/programs/internship-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" width="324" height="420" srcset="img/blocks/programs/internship-tablet.webp, img/blocks/programs/internship-tablet@2x.webp 2x">
+            <source type="image/webp" width="290" height="400" srcset="img/blocks/programs/internship-mobile.webp, img/blocks/programs/internship-mobile@2x.webp 2x">
+
+            <source media="(min-width: 1440px)" width="392" height="420" type="image/jpeg" srcset="img/blocks/programs/internship-desktop.jpg 1x, img/blocks/programs/internship-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" width="324" height="420" type="image/jpeg" srcset="img/blocks/programs/internship-tablet.jpg 1x, img/blocks/programs/internship-tablet@2x.jpg 2x">
+            <img src="img/blocks/programs/internship-mobile.jpg" srcset="img/blocks/programs/internship-mobile@2x.jpg 2x" width="290" height="400" alt="Две девушки, сидя за столом, изучают документы.">
+          </picture>
+          <div class="programs__slide-inner nebo nebo--tr">
             <h3 class="programs__slide-title">Стажировки</h3>
-            <div class="programs__slide-description-container">
-              <p>Получите незаменимый опыт работы в крупнейших мировых компаниях.</p>
+            <div class="programs__slide-inner-box">
+              <div class="programs__slide-description-container">
+                <p>Получите незаменимый опыт работы в крупнейших мировых компаниях.</p>
+              </div>
+              <a class="programs__slide-inner-link button" href="#" aria-label="Узнать подробнее"></a>
             </div>
           </div>
+
         </div>
 
         <div class="programs__slide swiper-slide">
-          <picture></picture>
-          <div class="programs__slide-inner">
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)" width="392" height="420" srcset="img/blocks/programs/volunteering-desktop.webp 1x, img/blocks/programs/volunteering-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" width="324" height="420" srcset="img/blocks/programs/volunteering-tablet.webp, img/blocks/programs/volunteering-tablet@2x.webp 2x">
+            <source type="image/webp" width="290" height="400" srcset="img/blocks/programs/volunteering-mobile.webp, img/blocks/programs/volunteering-mobile@2x.webp 2x">
+
+            <source media="(min-width: 1440px)" width="392" height="420" type="image/jpeg" srcset="img/blocks/programs/volunteering-desktop.jpg 1x, img/blocks/programs/volunteering-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" width="324" height="420" type="image/jpeg" srcset="img/blocks/programs/volunteering-tablet.jpg 1x, img/blocks/programs/volunteering-tablet@2x.jpg 2x">
+            <img src="img/blocks/programs/volunteering-mobile.jpg" srcset="img/blocks/programs/volunteering-mobile@2x.jpg 2x" width="290" height="400" alt="Молодой человек в синей футболке с белой надписью  держит саженец.">
+          </picture>
+          <div class="programs__slide-inner nebo nebo--tr">
             <h3 class="programs__slide-title">Волонтёрство</h3>
-            <div class="programs__slide-description-container">
-              <p>Помогайте другим и развивайте свои лидерские качества</p>
+            <div class="programs__slide-inner-box">
+              <div class="programs__slide-description-container">
+                <p>Помогайте другим и развивайте свои лидерские качества</p>
+              </div>
+              <a class="programs__slide-inner-link button" href="#" aria-label="Узнать подробнее"></a>
             </div>
           </div>
         </div>
 
         <div class="programs__slide swiper-slide">
-          <picture></picture>
-          <div class="programs__slide-inner">
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)" width="392" height="420" srcset="img/blocks/programs/learning-desktop.webp 1x, img/blocks/programs/learning-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" width="324" height="420" srcset="img/blocks/programs/learning-tablet.webp, img/blocks/programs/learning-tablet@2x.webp 2x">
+            <source type="image/webp" width="290" height="400" srcset="img/blocks/programs/learning-mobile.webp, img/blocks/programs/learning-mobile@2x.webp 2x">
+
+            <source media="(min-width: 1440px)" width="392" height="420" type="image/jpeg" srcset="img/blocks/programs/learning-desktop.jpg 1x, img/blocks/programs/learning-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" width="324" height="420" type="image/jpeg" srcset="img/blocks/programs/learning-tablet.jpg 1x, img/blocks/programs/learning-tablet@2x.jpg 2x">
+            <img src="img/blocks/programs/learning-mobile.jpg" srcset="img/blocks/programs/learning-mobile@2x.jpg 2x" width="290" height="400" alt="Молодой человек в очках что-то записывает, сидя за столом, на переднем плане лежат книги.">
+          </picture>
+          <div class="programs__slide-inner nebo nebo--tr">
             <h3 class="programs__slide-title">Учёба</h3>
-            <div class="programs__slide-description-container">
-              <p>Получите образование и измените своё будущее.</p>
+            <div class="programs__slide-inner-box">
+              <div class="programs__slide-description-container">
+                <p>Получите образование и измените своё будущее.</p>
+              </div>
+              <a class="programs__slide-inner-link button" href="#" aria-label="Узнать подробнее"></a>
             </div>
           </div>
         </div>
