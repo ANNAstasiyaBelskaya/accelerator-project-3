@@ -1,0 +1,77 @@
+.grant {
+  margin: 0 auto;
+  padding: 70px 15px;
+  width: 320px;
+  color: var(--secondary-color, $secondary-color);
+  background-color: var(--accent-color, $accent-color);
+  box-sizing: border-box;
+}
+
+.grant__title {
+  @include font (20px, 20px, 400);
+
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.grant__info-container img {
+  margin-bottom: 30px;
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+}
+
+.grant__description-container {
+  margin-bottom: 30px;
+
+  p {
+    @include font (14px, 20px, 400);
+
+    margin: 0;
+  }
+}
+
+.grant__features-description {
+  @include font (18px, 22px, 400);
+
+  margin: 0;
+  margin-bottom: 15px;
+  padding: 10px 10px 10px 0;
+}
+
+.grant__features-list {
+  @include list-style;
+
+  padding-top: 5px;
+  padding-left: 15px;
+  display: flex;
+  flex-flow: column wrap;
+  gap: 15px;
+}
+
+.grant__features-item {
+  position: relative;
+  padding: 25px 26px;
+  outline: 1px solid var(--additional-color, $additional-color);
+  border-radius: 16px;
+  box-sizing: border-box;
+
+  &::before {
+    position: absolute;
+    content: counter(list-item);
+    display: grid;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    top: -5px;
+    left: -15px;
+    background-color: var(--ccent-color, $accent-color);
+  }
+}
+
+.grant__features-item-description {
+  @include font (14px, 20px, 400);
+
+  margin: 0;
+}
