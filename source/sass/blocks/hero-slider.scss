@@ -49,7 +49,7 @@
 }
 
 .hero-slider__slide-headline {
-  @include font (22px, 26px, 400);
+  @include font ($primary-font, 22px, 26px, 400);
 
   --nb-r: 12px;
   --nb-w: 0px;
@@ -76,15 +76,11 @@
 }
 
 .hero-slider__description-container p {
-  @include font (16px, 20px, 400);
+  @include font ($primary-font, 16px, 20px, 400);
 
   margin: 0;
   margin-bottom: 25px;
   color: var(--primary-color, $primary-color);
-}
-
-.hero-slider__button-container {
-  padding: 0 1px;
 }
 
 .hero-slider__slide-button {
@@ -120,4 +116,76 @@
 .hero-slider__controls.swiper-pagination-bullets .swiper-pagination-bullet-active {
   border: 2px solid var(--active-element-color, $active-element-color);
   background-color: var(--active-element-color, $active-element-color);
+}
+
+@media (min-width: $mobile-width) and (width <= 767px) {
+  .hero-slider__button-container {
+    padding: 0 1px;
+  }
+}
+
+@media (min-width: $tablet-width) and (width <= 1439px) {
+  .hero-slider {
+    margin-top: -115px;
+  }
+
+  .hero-slider__wrapper {
+    min-height: 1024px;
+  }
+
+  .hero-slider__slide {
+    min-height: 1024px;
+  }
+
+  .hero-slider__slide-inner {
+    --nb-r: 12px;
+    --nb-w: 535px;
+    --nb-h: 4px;
+
+    padding-bottom: 60px;
+    margin-left: 45px;
+    margin-right: 64px;
+    width: 659px;
+  }
+
+  .hero-slider__slide-headline {
+    --nb-r: 26px;
+    --nb-w: 21px;
+    --nb-h: 0px;
+
+    padding: 70px 69px 40px 40px;
+    font-size: 36px;
+    line-height: 44px;
+    border-top-left-radius: 21px;
+  }
+
+  .hero-slider__controls.swiper-pagination-bullets .swiper-pagination-bullet {
+    width: 14px;
+    height: 14px;
+  }
+
+  .hero-slider__info-container {
+    --nb-r: 30px;
+    --nb-w: 0px;
+    --nb-h: 73px;
+
+    display: grid;
+    grid-template-columns: 285px 198px;
+    gap: 30px;
+    padding: 0 40px;
+    width: 571px;
+    border-bottom-left-radius: 30px;
+  }
+
+  .hero-slider__description-container p {
+    margin-bottom: 29px;
+  }
+
+  .hero-slider__description-container br {
+    display: none;
+  }
+
+  .hero-slider__slide-button {
+    padding-right: 81px;
+  }
 }

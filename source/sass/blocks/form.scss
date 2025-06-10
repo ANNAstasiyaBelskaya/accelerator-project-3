@@ -1,0 +1,263 @@
+.form {
+  margin: 0 auto;
+  padding: 40px 0;
+  width: 100%;
+  min-height: 833px;
+  box-sizing: border-box;
+  background-color: var(--additional-color, $additional-color);
+}
+
+.form__background {
+  margin: 0 auto;
+  padding: 43px 10px 40px;
+  width: 100%;
+  min-height: 753px;
+  box-sizing: border-box;
+  background-image:
+    image-set(
+      url("../img/blocks/form/form-background-mobile.webp") 1x type("image/webp"),
+      url("../img/blocks/form/form-background-mobile@2x.webp") 2x type("image/webp"),
+      url("../img/blocks/form/form-background-mobile.png") 1x type("image/png"),
+      url("../img/blocks/form/form-background-mobile@2x.png") 2x type("image/png"));
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% auto;
+}
+
+.form__container {
+  margin: 0 auto;
+  width: 300px;
+  padding: 15px 15px 27px;
+  box-sizing: border-box;
+  background-color: var(--accent-color, $accent-color);
+  border-radius: 16px;
+}
+
+.form__title {
+  @include font($primary-font, 18px, 22px, 400);
+
+  margin: 0;
+  margin-bottom: 10px;
+  color: var(--secondary-color, $secondary-color);
+}
+
+.form__description {
+  @include font ($primary-font, 14px, 20px, 400);
+
+  margin: 0;
+  margin-bottom: 20px;
+  color: var(--additional-color, $additional-color);
+}
+
+.form__field {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 20px;
+}
+
+.form__field-input {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 12px;
+}
+
+.form__field label {
+  @include font($primary-font, 12px, 14px, 400);
+
+  color: rgba(240, 239, 233, 0.8);
+}
+
+.form__field-input input,
+.form__field-input select,
+.form__field-input textarea {
+  margin: 0;
+  width: 100%;
+  min-height: 50px;
+  padding-left: 25px;
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  background-color: transparent;
+}
+
+.form__field-input textarea {
+  min-height: 94px;
+}
+
+.form__field-input select {
+  position: relative;
+  display: block;
+  min-height: 52px;
+  padding-right: 36px;
+  appearance: none;
+}
+
+
+.form__field-input--select {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+    top: 44px;
+    right: 20px;
+    background-image: url("/__spritemap#sprite-arrow-down-view");
+    background-repeat: no-repeat;
+    background-size: contain;
+    pointer-events: none;
+    transition: all 0.05s ease-in-out;
+  }
+}
+
+.form__field-input--select.opened::after {
+  transform: rotate(180deg);
+}
+
+.form__field-checkbox {
+  position: relative;
+  padding-left: 30px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.form__field-checkbox label {
+  color: var(--secondary-color, $secondary-color);
+}
+
+.form__field-checkbox label br {
+  display: none;
+}
+
+.form__field-checkbox-mark {
+  position: absolute;
+  content: "";
+  display: grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 2px;
+  fill: none;
+  stroke: none;
+}
+
+.form__field input:hover,
+.form__field select:hover,
+.form__field textarea:hover {
+  border: 1px solid var(--secondary-color, $secondary-color);
+}
+
+.form__field input:focus,
+.form__field select:focus,
+.form__field textarea:focus,
+.form__field input:active,
+.form__field select:active,
+.form__field textarea:active {
+  border: 1px solid var(--secondary-color, $secondary-color);
+  caret-color: var(--secondary-color, $secondary-color);
+  outline: none;
+}
+
+.form__field input:disabled,
+.form__field select:disabled,
+.form__field textarea:disabled {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.form__field-checkbox input:hover + .form__field-checkbox-mark,
+.form__field-checkbox input + .form__field-checkbox-mark:hover,
+.form__field-checkbox input:focus + .form__field-checkbox-mark {
+  border: 1px solid var(--secondary-color, $secondary-color);
+}
+
+.form__field-checkbox input:hover + .form__field-checkbox-mark + label,
+.form__field-checkbox input:focus + .form__field-checkbox-mark + label {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.form__field-checkbox input:disabled + .form__field-checkbox-mark {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.form__field-checkbox input:checked + .form__field-checkbox-mark {
+  background-color: var(--secondary-color, $secondary-color);
+  stroke: var(--accent-color, $accent-color);
+}
+
+.form__field-checkbox input:checked:disabled + .form__field-checkbox-mark {
+  background-color: var(--disabled-element-color, $disabled-element-color);
+  stroke: rgba(255, 255, 255, 0.7);
+}
+
+@media (min-width: $mobile-width) and (width <= 767px) {
+  .form__field-checkbox label br {
+    display: block;
+  }
+}
+
+@media (min-width: $tablet-width) and (width <= 1439px) {
+  .form {
+    padding: 50px 58px;
+  }
+
+  .form__background {
+    position: relative;
+    padding: 0;
+    width: 100%;
+    min-height: 780px;
+    background-image:
+      image-set(
+        url("../img/blocks/form/form-background-tablet.webp") 1x type("image/webp"),
+        url("../img/blocks/form/form-background-tablet@2x.webp") 2x type("image/webp"),
+        url("../img/blocks/form/form-background-tablet.png") 1x type("image/png"),
+        url("../img/blocks/form/form-background-tablet@2x.png") 2x type("image/png"));
+  }
+
+  .form__container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    width: 442px;
+    min-height: 780px;
+    padding: 41px 40px 36px;
+  }
+
+  .form__title {
+    margin-bottom: 31px;
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  .form__description {
+    margin-bottom: 40px;
+    font-size: 16px;
+  }
+
+  .form__field label {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .form__field-checkbox {
+    align-items: center;
+    min-height: 20px;
+    margin-bottom: 20px;
+  }
+
+  .form__field-checkbox label {
+    font-size: 12px;
+    line-height: 12px;
+  }
+
+  .form__field-input textarea {
+    min-height: 88px;
+  }
+}

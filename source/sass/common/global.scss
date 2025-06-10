@@ -20,9 +20,10 @@ body {
   flex-direction: column;
   margin: 0 auto;
   min-width: 320px;
-  min-height: 100vh;
+  min-height: 100%;
+  font-family: $primary-font;
   color: var(--primary-color, $primary-color);
-  font-family: $base-font;
+  scroll-behavior: smooth;
   cursor: default;
 
   @media (min-width: $tablet-width) {
@@ -40,5 +41,5 @@ body.no-scroll {
 }
 
 main {
-  flex: 1;
+  flex-grow: 1;
 }

@@ -1,4 +1,5 @@
 const navigationContainer = document.querySelector('.page-header__navigation');
+const navigationList = navigationContainer.querySelector('.navigation');
 const navigationItems = navigationContainer.querySelectorAll('.navigation__item');
 const menuButton = document.querySelector('.page-header__menu-button');
 const overlay = document.querySelector('.page-header__overlay-container');
@@ -7,6 +8,7 @@ const body = document.querySelector('body');
 const openMenu = () => {
   menuButton.classList.add('opened');
   navigationContainer.classList.add('opened');
+  navigationList.classList.add('opened');
   overlay.classList.add('opened');
   body.classList.add('no-scroll');
 };
@@ -31,6 +33,7 @@ const openSubMenu = () => {
 const closeMenu = () => {
   menuButton.classList.remove('opened');
   navigationContainer.classList.remove('opened');
+  navigationList.classList.remove('opened');
   overlay.classList.remove('opened');
   body.classList.remove('no-scroll');
 

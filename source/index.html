@@ -5,7 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Internship</title>
-  <link rel="preload" href="source/fonts/Manrope-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/Manrope-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/Manrope-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/Manrope-ExtraBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/Manrope-Light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/Manrope-ExtraLight.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/Manrope-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/Manrope-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="stylesheet" href="sass/style.scss">
   <!-- <link rel="icon" href="#">32x32 -->
   <!-- <link rel="icon" href="#" type="image/svg+xml"> -->
@@ -18,23 +24,23 @@
     <a class="page-header__logo" href="#">
       <img src="./img/logo.png" width="52" height="52" alt="логотип Internship">
     </a>
-    <button class="page-header__menu-button button" type="button">Меню</button>
+    <button class="page-header__menu-button" type="button">Меню</button>
     <nav class="page-header__navigation">
       <ul class="navigation">
         <li class="navigation__item">
-          <a href="#">О проекте</a>
+          <a href="#about">О проекте</a>
         </li>
         <li class="navigation__item">
-          <a class="navigation__link" href="#">Программы</a>
+          <a class="navigation__link" href="#programs">Программы</a>
           <ul class="navigation__inner-list">
             <li class="navigation__inner-list-item">
-              <a href="#">Стажировки</a>
+              <a href="#internship">Стажировки</a>
             </li>
             <li class="navigation__inner-list-item">
-              <a href="#">Волонтёрство</a>
+              <a href="#volunteering">Волонтёрство</a>
             </li>
             <li class="navigation__inner-list-item">
-              <a href="#">Учёба</a>
+              <a href="#learning">Учёба</a>
             </li>
             <li class="navigation__inner-list-item">
               <a href="#">Религия</a>
@@ -42,33 +48,33 @@
           </ul>
         </li>
         <li class="navigation__item">
-          <a href="#">Как поехать</a>
+          <a href="#grant">Как поехать</a>
         </li>
         <li class="navigation__item">
-          <a href="#">Отзывы</a>
+          <a href="#reviews">Отзывы</a>
         </li>
         <li class="navigation__item">
-          <a class="navigation__link" href="#">Новости</a>
+          <a class="navigation__link" href="#news">Новости</a>
           <ul class="navigation__inner-list">
             <li class="navigation__inner-list-item">
-              <a href="#">Общее</a>
+              <a href="#general">Общее</a>
             </li>
             <li class="navigation__inner-list-item">
-              <a href="#">Волонтёрство</a>
+              <a href="#volunteer">Волонтёрство</a>
             </li>
             <li class="navigation__inner-list-item">
-              <a href="#">Стажировки</a>
+              <a href="#intern">Стажировки</a>
             </li>
             <li class="navigation__inner-list-item">
-              <a href="#">Карьера</a>
+              <a href="#career">Карьера</a>
             </li>
             <li class="navigation__inner-list-item">
-              <a href="#">Путешествия</a>
+              <a href="#travel">Путешествия</a>
             </li>
           </ul>
         </li>
         <li class="navigation__item">
-          <a href="#">Контакты</a>
+          <a href="#contacts">Контакты</a>
         </li>
       </ul>
     </nav>
@@ -148,10 +154,9 @@
           </div>
         </div>
       </div>
-      <div class="hero-slider__controls swiper-pagination">
-      </div>
+      <div class="hero-slider__controls swiper-pagination"></div>
     </section>
-    <section class="about" data-test="about">
+    <section class="about" id="about" data-test="about">
       <h2 class="about__title">О проекте «Стажировка»</h2>
       <div class="about__content">
         <p>«Стажировка» — совместный проект
@@ -188,7 +193,7 @@
               </div>
               <div class="modal__form-input">
                 <label for="city-select">Выберите город</label>
-                <select aria-label="Выберите город" name="city" id="city-select">
+                <select name="city" id="city-select">
                   <option value=""></option>
                   <option value="Москва">Москва</option>
                   <option value="Санкт-Петербург">Санкт-Петербург</option>
@@ -210,32 +215,94 @@
       </div>
       <ul class="about__list">
         <li class="about__list-item">
-          <h4 class="about__list-item-title">Более 250 программ</h4>
-          <p class="about__list-item-description">учебных и рабочих, разной
-            длительностью от 3 месяцев
+          <h3 class="about__list-item-title">Более 250 программ</h3>
+          <p class="about__list-item-description">учебных и рабочих, разной<br>
+            длительностью<br>от 3 месяцев
             до 1 года</p>
         </li>
         <li class="about__list-item">
-          <h4 class="about__list-item-title">Более 3000 участников</h4>
-          <p class="about__list-item-description">уже успешно прошли программу от «Стажировка» и остались в разных странах</p>
+          <h3 class="about__list-item-title">Более 3000 участников</h3>
+          <p class="about__list-item-description">уже успешно прошли<br> программу<br> от «Стажировка»<br> и остались в разных<br> странах</p>
         </li>
         <li class="about__list-item">
-          <h4 class="about__list-item-title">участники из 60 стран</h4>
+          <h3 class="about__list-item-title">участники из 60 стран</h3>
           <p class="about__list-item-description">студенты со всего мира приезжают на программу
             «Стажировки» от 3 месяцев до 1 года</p>
         </li>
         <li class="about__list-item">
-          <h4 class="about__list-item-title">от 4 200 $<br>
-            до 8 400 $</h4>
+          <h3 class="about__list-item-title">от 4 200 $<br>
+            до 8 400 $</h3>
           <p class="about__list-item-description">грант всем участникам
             для комфортного прохождения
             программы</p>
         </li>
       </ul>
     </section>
-    <section class="programs" data-test="programs">
-      <div class="programs__inner-container">
+    <section class="programs" id="programs" data-test="programs">
+      <div class="programs__wrapper">
         <h2 class="programs__title">Программы</h2>
+        <div class="programs__slider-wrapper swiper-wrapper">
+          <div class="programs__slide swiper-slide">
+            <picture>
+              <source type="image/webp" media="(min-width: 1440px)" width="392" height="420" srcset="img/blocks/programs/internship-desktop.webp 1x, img/blocks/programs/internship-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" width="324" height="420" srcset="img/blocks/programs/internship-tablet.webp, img/blocks/programs/internship-tablet@2x.webp 2x">
+              <source type="image/webp" width="290" height="400" srcset="img/blocks/programs/internship-mobile.webp, img/blocks/programs/internship-mobile@2x.webp 2x">
+
+              <source media="(min-width: 1440px)" width="392" height="420" type="image/jpeg" srcset="img/blocks/programs/internship-desktop.jpg 1x, img/blocks/programs/internship-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" width="324" height="420" type="image/jpeg" srcset="img/blocks/programs/internship-tablet.jpg 1x, img/blocks/programs/internship-tablet@2x.jpg 2x">
+              <img src="img/blocks/programs/internship-mobile.jpg" srcset="img/blocks/programs/internship-mobile@2x.jpg 2x" width="290" height="400" alt="Две девушки, сидя за столом, изучают документы.">
+            </picture>
+            <div class="programs__slide-inner nebo nebo--tr">
+              <h3 class="programs__slide-title" id="internship">Стажировки</h3>
+              <div class="programs__slide-inner-box">
+                <div class="programs__slide-description-container">
+                  <p>Получите незаменимый опыт работы в крупнейших мировых компаниях.</p>
+                </div>
+                <a class="programs__slide-inner-link button" href="#" aria-label="Узнать подробнее"></a>
+              </div>
+            </div>
+          </div>
+          <div class="programs__slide swiper-slide">
+            <picture>
+              <source type="image/webp" media="(min-width: 1440px)" width="392" height="420" srcset="img/blocks/programs/volunteering-desktop.webp 1x, img/blocks/programs/volunteering-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" width="324" height="420" srcset="img/blocks/programs/volunteering-tablet.webp, img/blocks/programs/volunteering-tablet@2x.webp 2x">
+              <source type="image/webp" width="290" height="400" srcset="img/blocks/programs/volunteering-mobile.webp, img/blocks/programs/volunteering-mobile@2x.webp 2x">
+
+              <source media="(min-width: 1440px)" width="392" height="420" type="image/jpeg" srcset="img/blocks/programs/volunteering-desktop.jpg 1x, img/blocks/programs/volunteering-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" width="324" height="420" type="image/jpeg" srcset="img/blocks/programs/volunteering-tablet.jpg 1x, img/blocks/programs/volunteering-tablet@2x.jpg 2x">
+              <img src="img/blocks/programs/volunteering-mobile.jpg" srcset="img/blocks/programs/volunteering-mobile@2x.jpg 2x" width="290" height="400" alt="Молодой человек в синей футболке с белой надписью держит саженец.">
+            </picture>
+            <div class="programs__slide-inner nebo nebo--tr">
+              <h3 class="programs__slide-title" id="volunteering">Волонтёрство</h3>
+              <div class="programs__slide-inner-box">
+                <div class="programs__slide-description-container">
+                  <p>Помогайте другим и развивайте свои лидерские качества</p>
+                </div>
+                <a class="programs__slide-inner-link button" href="#" aria-label="Узнать подробнее"></a>
+              </div>
+            </div>
+          </div>
+          <div class="programs__slide swiper-slide">
+            <picture>
+              <source type="image/webp" media="(min-width: 1440px)" width="392" height="420" srcset="img/blocks/programs/learning-desktop.webp 1x, img/blocks/programs/learning-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" width="324" height="420" srcset="img/blocks/programs/learning-tablet.webp, img/blocks/programs/learning-tablet@2x.webp 2x">
+              <source type="image/webp" width="290" height="400" srcset="img/blocks/programs/learning-mobile.webp, img/blocks/programs/learning-mobile@2x.webp 2x">
+
+              <source media="(min-width: 1440px)" width="392" height="420" type="image/jpeg" srcset="img/blocks/programs/learning-desktop.jpg 1x, img/blocks/programs/learning-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" width="324" height="420" type="image/jpeg" srcset="img/blocks/programs/learning-tablet.jpg 1x, img/blocks/programs/learning-tablet@2x.jpg 2x">
+              <img src="img/blocks/programs/learning-mobile.jpg" srcset="img/blocks/programs/learning-mobile@2x.jpg 2x" width="290" height="400" alt="Молодой человек в очках что-то записывает, сидя за столом, на переднем плане лежат книги.">
+            </picture>
+            <div class="programs__slide-inner nebo nebo--tr">
+              <h3 class="programs__slide-title" id="learning">Учёба</h3>
+              <div class="programs__slide-inner-box">
+                <div class="programs__slide-description-container">
+                  <p>Получите образование и измените своё будущее.</p>
+                </div>
+                <a class="programs__slide-inner-link button" href="#" aria-label="Узнать подробнее"></a>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="programs__slider-controls">
           <button class="programs__slider-control-button swiper-button-prev" type="button" aria-label="Перейти к предыдущему слайду">
             <svg width="10" height="10">
@@ -248,161 +315,421 @@
             </svg>
           </button>
         </div>
-      </div>
-      <div class="programs__slider-wrapper swiper-wrapper">
-        <div class="programs__slide swiper-slide">
-          <picture>
-            <source type="image/webp" media="(min-width: 1440px)" width="392" height="420" srcset="img/blocks/programs/internship-desktop.webp 1x, img/blocks/programs/internship-desktop@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)" width="324" height="420" srcset="img/blocks/programs/internship-tablet.webp, img/blocks/programs/internship-tablet@2x.webp 2x">
-            <source type="image/webp" width="290" height="400" srcset="img/blocks/programs/internship-mobile.webp, img/blocks/programs/internship-mobile@2x.webp 2x">
-
-            <source media="(min-width: 1440px)" width="392" height="420" type="image/jpeg" srcset="img/blocks/programs/internship-desktop.jpg 1x, img/blocks/programs/internship-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" width="324" height="420" type="image/jpeg" srcset="img/blocks/programs/internship-tablet.jpg 1x, img/blocks/programs/internship-tablet@2x.jpg 2x">
-            <img src="img/blocks/programs/internship-mobile.jpg" srcset="img/blocks/programs/internship-mobile@2x.jpg 2x" width="290" height="400" alt="Две девушки, сидя за столом, изучают документы.">
-          </picture>
-          <div class="programs__slide-inner nebo nebo--tr">
-            <h3 class="programs__slide-title">Стажировки</h3>
-            <div class="programs__slide-inner-box">
-              <div class="programs__slide-description-container">
-                <p>Получите незаменимый опыт работы в крупнейших мировых компаниях.</p>
-              </div>
-              <a class="programs__slide-inner-link button" href="#" aria-label="Узнать подробнее"></a>
-            </div>
-          </div>
-        </div>
-        <div class="programs__slide swiper-slide">
-          <picture>
-            <source type="image/webp" media="(min-width: 1440px)" width="392" height="420" srcset="img/blocks/programs/volunteering-desktop.webp 1x, img/blocks/programs/volunteering-desktop@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)" width="324" height="420" srcset="img/blocks/programs/volunteering-tablet.webp, img/blocks/programs/volunteering-tablet@2x.webp 2x">
-            <source type="image/webp" width="290" height="400" srcset="img/blocks/programs/volunteering-mobile.webp, img/blocks/programs/volunteering-mobile@2x.webp 2x">
-
-            <source media="(min-width: 1440px)" width="392" height="420" type="image/jpeg" srcset="img/blocks/programs/volunteering-desktop.jpg 1x, img/blocks/programs/volunteering-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" width="324" height="420" type="image/jpeg" srcset="img/blocks/programs/volunteering-tablet.jpg 1x, img/blocks/programs/volunteering-tablet@2x.jpg 2x">
-            <img src="img/blocks/programs/volunteering-mobile.jpg" srcset="img/blocks/programs/volunteering-mobile@2x.jpg 2x" width="290" height="400" alt="Молодой человек в синей футболке с белой надписью  держит саженец.">
-          </picture>
-          <div class="programs__slide-inner nebo nebo--tr">
-            <h3 class="programs__slide-title">Волонтёрство</h3>
-            <div class="programs__slide-inner-box">
-              <div class="programs__slide-description-container">
-                <p>Помогайте другим и развивайте свои лидерские качества</p>
-              </div>
-              <a class="programs__slide-inner-link button" href="#" aria-label="Узнать подробнее"></a>
-            </div>
-          </div>
-        </div>
-        <div class="programs__slide swiper-slide">
-          <picture>
-            <source type="image/webp" media="(min-width: 1440px)" width="392" height="420" srcset="img/blocks/programs/learning-desktop.webp 1x, img/blocks/programs/learning-desktop@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)" width="324" height="420" srcset="img/blocks/programs/learning-tablet.webp, img/blocks/programs/learning-tablet@2x.webp 2x">
-            <source type="image/webp" width="290" height="400" srcset="img/blocks/programs/learning-mobile.webp, img/blocks/programs/learning-mobile@2x.webp 2x">
-
-            <source media="(min-width: 1440px)" width="392" height="420" type="image/jpeg" srcset="img/blocks/programs/learning-desktop.jpg 1x, img/blocks/programs/learning-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" width="324" height="420" type="image/jpeg" srcset="img/blocks/programs/learning-tablet.jpg 1x, img/blocks/programs/learning-tablet@2x.jpg 2x">
-            <img src="img/blocks/programs/learning-mobile.jpg" srcset="img/blocks/programs/learning-mobile@2x.jpg 2x" width="290" height="400" alt="Молодой человек в очках что-то записывает, сидя за столом, на переднем плане лежат книги.">
-          </picture>
-          <div class="programs__slide-inner nebo nebo--tr">
-            <h3 class="programs__slide-title">Учёба</h3>
-            <div class="programs__slide-inner-box">
-              <div class="programs__slide-description-container">
-                <p>Получите образование и измените своё будущее.</p>
-              </div>
-              <a class="programs__slide-inner-link button" href="#" aria-label="Узнать подробнее"></a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <a class="programs__button button" href="#">все программы</a>
-    </section>
-    <section class="grant" data-test="grant">
-      <div class="grant__info-container">
-        <h2 class="grant__title">Как поехать</h2>
-        <div class="grant__description-container">
-          <p>Свяжитесь с координатором, чтобы узнать
-            полную информацию. Вы получите
-            актуальные сведения о доступных
-            программах и городах, в которых можете
-            пройти программу.</p>
-        </div>
-        <picture>
-          <source type="image/webp" media="(min-width: 1440px)" width="498" height="363" srcset="img/blocks/grant/grant-desktop.webp 1x, img/blocks/grant/grant-desktop@2x.webp 2x">
-          <source type="image/webp" media="(min-width: 768px)" width="678" height="375" srcset="img/blocks/grant/grant-tablet.webp, img/blocks/grant/grant-tablet@2x.webp 2x">
-          <source type="image/webp" width="290" height="200" srcset="img/blocks/grant/grant-mobile.webp, img/blocks/grant/grant-mobile@2x.webp 2x">
-
-          <source media="(min-width: 1440px)" width="498" height="363" type="image/png" srcset="img/blocks/grant/grant-desktop.png 1x, img/blocks/grant/grant-desktop@2x.png 2x">
-          <source media="(min-width: 768px)" width="678" height="375" type="image/png" srcset="img/blocks/grant/grant-tablet.png 1x, img/blocks/grant/grant-tablet@2x.png 2x">
-          <img src="img/blocks/grant/grant-mobile.png" srcset="img/blocks/grant/grant-mobile@2x.png 2x" width="290" height="200" alt="деревянный столб с указателями направлений в виде стрелок">
-        </picture>
-      </div>
-      <div class="grant__features-container">
-        <h3 class="visually-hidden">Требования к получению гранта</h3>
-        <p class="grant__features-description">Чтобы получить грант
-          на обучение, вам нужно:</p>
-        <ol class="grant__features-list">
-          <li class="grant__features-item">
-            <p class="grant__features-item-description">Быть в возрасте от 16 до 30 лет</p>
-          </li>
-          <li class="grant__features-item">
-            <p class="grant__features-item-description">Иметь оконченное среднее
-              образование</p>
-          </li>
-          <li class="grant__features-item">
-            <p class="grant__features-item-description">Иметь документально
-              подтверждённое отсутствие
-              судимости и пройти консульскую
-              проверку</p>
-          </li>
-          <li class="grant__features-item">
-            <p class="grant__features-item-description">За последние 2 года быть
-              не больше 3х месяцев подряд
-              непрерывно в одной стране</p>
-          </li>
-        </ol>
+        <div class="programs__scrollbar swiper-scrollbar"></div>
+        <a class="programs__button button" href="#">все программы</a>
       </div>
     </section>
-    <section class="news" data-test="news">
-      <h2 class="news__title">Новости и материалы</h2>
-      <ul class="news__tabs">
-        <li class="news__tab">Общее</li>
-        <li class="news__tab">Волонтёрство</li>
-        <li class="news__tab">Стажировки</li>
-        <li class="news__tab">Карьера</li>
-        <li class="news__tab">Путешествия</li>
-      </ul>
-      <div class="news__slider-container swiper-wrapper">
-        <div class="news__slide swiper-slide">
+    <section class="grant" id="grant" data-test="grant">
+      <div class="grant__wrapper">
+        <div class="grant__info-container">
+          <h2 class="grant__title">Как поехать</h2>
+          <div class="grant__description-container">
+            <p>Свяжитесь с координатором, чтобы узнать
+              полную информацию. Вы получите
+              актуальные сведения о доступных
+              программах и городах, в которых можете
+              пройти программу.</p>
+          </div>
           <picture>
-            <source type="image/webp" media="(min-width: 1440px)" width="604" height="400" srcset="img/blocks/programs/internship-desktop.webp 1x, img/blocks/programs/internship-desktop@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)" width="324" height="350" srcset="img/blocks/programs/internship-tablet.webp, img/blocks/programs/internship-tablet@2x.webp 2x">
-            <source type="image/webp" width="290" height="330" srcset="img/blocks/programs/internship-mobile.webp, img/blocks/programs/internship-mobile@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 1440px)" width="498" height="363" srcset="img/blocks/grant/grant-desktop.webp 1x, img/blocks/grant/grant-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" width="678" height="375" srcset="img/blocks/grant/grant-tablet.webp, img/blocks/grant/grant-tablet@2x.webp 2x">
+            <source type="image/webp" width="290" height="200" srcset="img/blocks/grant/grant-mobile.webp, img/blocks/grant/grant-mobile@2x.webp 2x">
 
-            <source media="(min-width: 1440px)" width="604" height="400" type="image/jpeg" srcset="img/blocks/programs/internship-desktop.jpg 1x, img/blocks/programs/internship-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" width="324" height="350" type="image/jpeg" srcset="img/blocks/programs/internship-tablet.jpg 1x, img/blocks/programs/internship-tablet@2x.jpg 2x">
-            <img src="img/blocks/programs/internship-mobile.jpg" srcset="img/blocks/programs/internship-mobile@2x.jpg 2x" width="290" height="330" alt="Две девушки, сидя за столом, изучают документы.">
+            <source media="(min-width: 1440px)" width="498" height="363" type="image/png" srcset="img/blocks/grant/grant-desktop.png 1x, img/blocks/grant/grant-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" width="678" height="375" type="image/png" srcset="img/blocks/grant/grant-tablet.png 1x, img/blocks/grant/grant-tablet@2x.png 2x">
+            <img src="img/blocks/grant/grant-mobile.png" srcset="img/blocks/grant/grant-mobile@2x.png 2x" width="290" height="200" alt="деревянный столб с указателями направлений в виде стрелок">
           </picture>
-          <span class="news__slide-date"></span>
-          <h3 class="news__slide-title"></h3>
-          <div class="news__slide-inner-box">
-            <div class="news__slide-description-container">
+        </div>
+        <div class="grant__features-container">
+          <h3 class="visually-hidden">Требования к получению гранта</h3>
+          <p class="grant__features-description">Чтобы получить грант
+            на обучение, вам нужно:</p>
+          <ol class="grant__features-list">
+            <li class="grant__features-item">
+              <p class="grant__features-item-description">Быть в возрасте от 16 до 30 лет</p>
+            </li>
+            <li class="grant__features-item">
+              <p class="grant__features-item-description">Иметь оконченное среднее
+                образование</p>
+            </li>
+            <li class="grant__features-item">
+              <p class="grant__features-item-description">Иметь документально
+                подтверждённое отсутствие
+                судимости и пройти консульскую
+                проверку</p>
+            </li>
+            <li class="grant__features-item">
+              <p class="grant__features-item-description">За последние 2 года быть
+                не больше 3х месяцев подряд
+                непрерывно в одной стране</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+    <section class="news" id="news" data-test="news">
+      <div class="news__wrapper">
+        <h2 class="news__title">Новости и материалы</h2>
+        <div class="news__tabs">
+          <button class="news__tab news__tab--active" data-slide="1" type="button" id="general">Общее</button>
+          <button class="news__tab" data-slide="2" type="button" id="volunteer">Волонтёрство</button>
+          <button class="news__tab" data-slide="3" type="button" id="intern">Стажировки</button>
+          <button class="news__tab" data-slide="4" type="button" id="career">Карьера</button>
+          <button class="news__tab" data-slide="5" type="button" id="travel">Путешествия</button>
+        </div>
+        <div class="news__slider-container swiper-wrapper">
+          <div class="news__slide-group swiper-slide">
+            <div class="news__slide-group-item" data-slide="1">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)" width="604" height="400" srcset="img/blocks/news/participant-desktop.webp 1x, img/blocks/news/participant-desktop@2x.webp 2x">
+                <source type="image/webp" width="290" height="330" srcset="img/blocks/news/participant.webp, img/blocks/news/participant@2x.webp 2x">
+
+                <source media="(min-width: 1440px)" width="604" height="400" type="image/jpeg" srcset="img/blocks/news/participant-desktop.jpg 1x, img/blocks/news/participant-desktop@2x.jpg 2x">
+                <img src="img/blocks/news/participant.jpg" srcset="img/blocks/news/participant@2x.jpg 2x" width="290" height="330" alt="Девушка и парень в библиотеке на интервью">
+              </picture>
+              <div class="news__slide-inner nebo nebo--tr">
+                <span class="news__slide-date nebo nebo--tr">23/03/2023</span>
+                <h3 class="news__slide-title nebo nebo--tr">Интервью с участницей программы стажировки</h3>
+                <div class="news__slide-inner-box nebo nebo--tr">
+                  <div class="news__slide-description-container">
+                    <p>Саша рассказывает, как попала в программу и как прошла 6-месячная стажировка в ISOFound</p>
+                  </div>
+                  <a class="news__slide-inner-link button" href="#" aria-label="Узнать подробнее"></a>
+                </div>
+              </div>
+            </div>
+            <div class="news__slide-group-item" data-slide="2">
+              <picture>
+                <source type="image/webp" width="290" height="330" srcset="img/blocks/news/journey.webp, img/blocks/news/journey@2x.webp 2x">
+
+                <img src="img/blocks/news/journey.jpg" srcset="img/blocks/news/journey@2x.jpg 2x" width="290" height="330" alt="море с пляжем рядом с городом, дневной вид сверху">
+              </picture>
+              <div class="news__slide-inner nebo nebo--tr">
+                <span class="news__slide-date nebo nebo--tr">20/03/2023</span>
+                <h3 class="news__slide-title nebo nebo--tr">Путешествуем по миру</h3>
+                <div class="news__slide-inner-box nebo nebo--tr">
+                  <div class="news__slide-description-container">
+                    <p>Какие места посещают наши студенты весной</p>
+                  </div>
+                  <a class="news__slide-inner-link button" href="#" aria-label="Узнать подробнее"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="news__slide-group swiper-slide">
+            <div class="news__slide-group-item" data-slide="3">
+              <picture>
+                <source type="image/webp" width="290" height="330" srcset="img/blocks/news/volunteering.webp, img/blocks/news/volunteering@2x.webp 2x">
+
+                <img src="img/blocks/news/volunteering.jpg" srcset="img/blocks/news/volunteering@2x.jpg 2x" width="290" height="330" alt="девушка-волонтер в оранжевом жилете, в кадре две руки, держащие бейджик">
+              </picture>
+              <div class="news__slide-inner nebo nebo--tr">
+                <span class="news__slide-date nebo nebo--tr">17/03/2023</span>
+                <h3 class="news__slide-title nebo nebo--tr">Новая программа<br> волонтёрства</h3>
+                <div class="news__slide-inner-box nebo nebo--tr">
+                  <div class="news__slide-description-container">
+                    <p>Программа помощи детям длительностью 4 месяца</p>
+                  </div>
+                  <a class="news__slide-inner-link button" href="#" aria-label="Узнать подробнее"></a>
+                </div>
+              </div>
+            </div>
+            <div class="news__slide-group-item" data-slide="4">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)" width="604" height="400" srcset="img/blocks/news/career-desktop.webp 1x, img/blocks/news/career-desktop@2x.webp 2x">
+                <source type="image/webp" width="290" height="330" srcset="img/blocks/news/career.webp, img/blocks/news/career@2x.webp 2x">
+
+                <source media="(min-width: 1440px)" width="604" height="400" type="image/jpeg" srcset="img/blocks/news/career-desktop.jpg 1x, img/blocks/news/career-desktop@2x.jpg 2x">
+                <img src="img/blocks/news/career.jpg" srcset="img/blocks/news/career@2x.jpg 2x" width="290" height="330" alt="Рабочий стол, вид сверху">
+              </picture>
+              <div class="news__slide-inner nebo nebo--tr">
+                <span class="news__slide-date nebo nebo--tr">10/03/2023</span>
+                <h3 class="news__slide-title nebo nebo--tr">Построй свою<br> карьеру</h3>
+                <div class="news__slide-inner-box nebo nebo--tr">
+                  <div class="news__slide-description-container">
+                    <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
+                  </div>
+                  <a class="news__slide-inner-link button" href="#" aria-label="Узнать подробнее"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="news__slider-controls">
+          <button class="news__slider-navigation-button swiper-button-prev" type="button" aria-label="Перейти к предыдущему слайду">
+            <svg width="10" height="10">
+              <use href="/__spritemap#sprite-arrow-left"></use>
+            </svg>
+          </button>
+          <div class="news__slider-pagination swiper-pagination"></div>
+          <button class="news__slider-navigation-button swiper-button-next" type="button" aria-label="Перейти к следующему слайду">
+            <svg width="10" height="10">
+              <use href="/__spritemap#sprite-arrow-right"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="faq" data-test="FAQ">
+      <div class="faq__wrapper">
+        <h2 class="faq__title">Вопросы и ответы</h2>
+        <div class="faq__accordion-container">
+          <details class="faq__item">
+            <summary class="faq__item-title">Кто организатор? Какие
+              сроки у программы?</summary>
+            <div class="faq__description-box">
               <p></p>
             </div>
-            <a class="news__slide-inner-link button" href="#" aria-label="Узнать подробнее"></a>
-          </div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__item-title">Что такое грант
+              на обучение?</summary>
+            <div class="faq__description-box">
+              <p></p>
+            </div>
+          </details>
+          <details class="faq__item" open>
+            <summary class="faq__item-title">Как определяется
+              стоимость программы?</summary>
+            <div class="faq__description-box">
+              <p>Полная стоимость определяется
+                организаторами в зависимости
+                от направления. В большинстве
+                случаев грант «Стажировка»
+                не покрывает полную стоимость
+                программы, и поэтому
+                предусматривается определённая
+                доля личного участия.</p>
+            </div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__item-title">Признаётся ли учёба
+              в рамках проекта для дальнейшего&nbsp;обучения?</summary>
+            <div class="faq__description-box">
+              <p></p>
+            </div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__item-title">Как выглядит полный
+              процесс регистрации
+              на программу
+              «Стажировка»?</summary>
+            <div class="faq__description-box">
+              <p></p>
+            </div>
+          </details>
         </div>
       </div>
     </section>
-    <div data-test="FAQ">FAQ</div>
-    <div data-test="reviews">reviews</div>
-    <div data-test="contacts">contacts</div>
-    <div data-test="form">form</div>
-    <div data-test="footer">footer</div>
+    <section class="reviews" id="reviews" data-test="reviews">
+      <div class="reviews__wrapper">
+        <h2 class="reviews__title">Отзывы</h2>
+        <div class="reviews__slider-controls">
+          <button class="reviews__slider-control-button swiper-button-prev" type="button" aria-label="Перейти к предыдущему слайду">
+            <svg width="10" height="10">
+              <use href="/__spritemap#sprite-arrow-left"></use>
+            </svg>
+          </button>
+          <button class="reviews__slider-control-button swiper-button-next" type="button" aria-label="Перейти к следующему слайду">
+            <svg width="10" height="10">
+              <use href="/__spritemap#sprite-arrow-right"></use>
+            </svg>
+          </button>
+        </div>
+
+        <div class="reviews__slider swiper-wrapper">
+          <div class="reviews__slide swiper-slide">
+            <div class="reviews__slide-inner">
+              <div class="reviews__slide-reviewer-box">
+                <picture>
+                  <source type="image/webp" media="(min-width: 768px)" width="90" height="90" srcset="img/blocks/reviews/lola-alex.webp, img/blocks/reviews/lola-alex@2x.webp 2x">
+                  <source type="image/webp" width="60" height="60" srcset="img/blocks/reviews/lola-alex.webp, img/blocks/reviews/lola-alex@2x.webp 2x">
+
+                  <source media="(min-width: 768px)" width="90" height="90" type="image/png" srcset="img/blocks/reviews/lola-alex.png 1x, img/blocks/reviews/lola-alex@2x.png 2x">
+                  <img src="img/blocks/reviews/lola-alex.png" srcset="img/blocks/reviews/lola-alex@2x.png 2x" width="60" height="60" alt="автор отзыва - Лола Алекс">
+                </picture>
+                <p class="reviews__slide-author">Лола<br> Алекс</p>
+              </div>
+              <dl class="reviews__slide-info">
+                <dt>программа</dt>
+                <dd>Masa Art Challenge</dd>
+                <dt>Дата</dt>
+                <dd>Осень 2022</dd>
+              </dl>
+            </div>
+            <p class="reviews__slide-lead">Я могу с уверенностью сказать, что это был
+              один из самых незабываемых опытов
+              в жизни!</p>
+            <div class="reviews__slide-description">
+              <p>Я рекомендую программу «Стажировка» всем студентам,
+                желающим получить незабываемые впечатления. Сочетание
+                путешествий, общения и значимой работы действительно
+                отличает её от других программ, и я чувствую огромную
+                благодарность за предоставленную мне возможность.</p>
+            </div>
+          </div>
+
+          <div class="reviews__slide swiper-slide">
+            <div class="reviews__slide-inner">
+              <div class="reviews__slide-reviewer-box">
+                <picture>
+                  <source type="image/webp" media="(min-width: 768px)" width="90" height="90" srcset="img/blocks/reviews/david-ivanov.webp, img/blocks/reviews/david-ivanov@2x.webp 2x">
+                  <source type="image/webp" width="60" height="60" srcset="img/blocks/reviews/david-ivanov.webp, img/blocks/reviews/david-ivanov@2x.webp 2x">
+
+                  <source media="(min-width: 768px)" width="90" height="90" type="image/png" srcset="img/blocks/reviews/david-ivanov.png 1x, img/blocks/reviews/david-ivanov@2x.png 2x">
+                  <img src="img/blocks/reviews/david-ivanov.png" srcset="img/blocks/reviews/david-ivanov@2x.png 2x" width="60" height="60" alt="автор отзыва - Давид Иванов">
+                </picture>
+                <p class="reviews__slide-author">Давид<br> Иванов</p>
+              </div>
+              <dl class="reviews__slide-info">
+                <dt>программа</dt>
+                <dd>Volunteer Chance</dd>
+                <dt>Дата</dt>
+                <dd>Лето 2022</dd>
+              </dl>
+            </div>
+            <p class="reviews__slide-lead">Благодаря опыту стажировки я узнал
+              так много нового о себе и об окружающем
+              мире.</p>
+            <div class="reviews__slide-description">
+              <p>Каждый день был возможностью оказать ощутимое влияние
+                на жизнь других людей. Я бы очень рекомендовал
+                эту волонтёрскую программу всем, кто ищет значимый
+                и незабываемый опыт. Организация была на высшем уровне.
+                Для меня было честью быть частью такой удивительной
+                инициативы.</p>
+            </div>
+          </div>
+        </div>
+        <div class="reviews__scrollbar swiper-scrollbar"></div>
+      </div>
+    </section>
+    <section class="contacts" id="contacts" data-test="contacts">
+      <div class="contacts__wrapper">
+        <h2 class="contacts__title">Контакты</h2>
+        <address class="contacts__address">
+          <div class="contacts__address-item">
+            <p class="contacts__address-item-title">Центральный офис</p>
+            <p class="contacts__address-item-description">г. Новосибирск, ул. Щетинкина 68, культурный центр</p>
+          </div>
+          <div class="contacts__address-item">
+            <p class="contacts__address-item-title">Телефон</p>
+            <a class="contacts__address-item-link" href="tel:+796387687676">+7 963 876 876 76</a>
+          </div>
+          <div class="contacts__address-item">
+            <p class="contacts__address-item-title">Email</p>
+            <a class="contacts__address-item-link" href="mailto:Info@stazh.ru">Info@stazh.ru</a>
+          </div>
+        </address>
+        <picture>
+          <source type="image/webp" media="(min-width: 1440px)" width="1240" height="486" srcset="img/blocks/contacts/map-desktop.webp 1x, img/blocks/contacts/map-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" width="678" height="500" srcset="img/blocks/contacts/map-tablet.webp, img/blocks/contacts/map-tablet@2x.webp 2x">
+          <source type="image/webp" width="290" height="240" srcset="img/blocks/contacts/map-mobile.webp, img/blocks/contacts/map-mobile@2x.webp 2x">
+
+          <source media="(min-width: 1440px)" width="1240" height="486" type="image/png" srcset="img/blocks/contacts/map-desktop.jpg 1x, img/blocks/contacts/map-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" width="678" height="500" type="image/png" srcset="img/blocks/contacts/map-tablet.jpg 1x, img/blocks/contacts/map-tablet@2x.jpg 2x">
+          <img src="img/blocks/contacts/map-mobile.jpg" srcset="img/blocks/contacts/map-mobile@2x.jpg 2x" width="290" height="240" alt="Расположение офиса Internship на карте">
+        </picture>
+      </div>
+    </section>
+    <section class="form" data-test="form">
+      <div class="form__background">
+        <div class="form__container">
+          <h2 class="form__title">Напишите нам</h2>
+          <p class="form__description">Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</p>
+          <form class="form__field" action="https://echo.htmlacademy.ru/" method="post">
+            <div class="form__field-input">
+              <label for="name-field">Имя</label>
+              <input type="text" name="name" id="name-field" autocomplete="on" required>
+            </div>
+            <div class="form__field-input">
+              <label for="tel">Телефон</label>
+              <input type="tel" name="tel" id="tel" autocomplete="on" required>
+            </div>
+            <div class="form__field-input">
+              <label for="message">Ваше сообщение</label>
+              <textarea name="message" id="message" autocomplete="off"></textarea>
+            </div>
+            <div class="form__field-input form__field-input--select">
+              <label for="city">Выберите город</label>
+              <select name="city" id="city">
+                <option value=""></option>
+                <option value="Москва">Москва</option>
+                <option value="Санкт-Петербург">Санкт-Петербург</option>
+              </select>
+            </div>
+            <div class="form__field-checkbox">
+              <input class="visually-hidden" type="checkbox" name="agreement" id="agreement" required>
+              <span class="form__field-checkbox-mark">
+                <svg width="10" height="10">
+                  <use href="/__spritemap#sprite-checkmark"></use>
+                </svg>
+              </span>
+              <label for="agreement">Я согласен на обработку моих<br> персональных<br> данных</label>
+            </div>
+            <button class="form__submit-button button button--blue-mode" type="submit">Отправить</button>
+          </form>
+        </div>
+      </div>
+    </section>
   </main>
+  <footer class="footer" data-test="footer">
+    <div class="footer__wrapper">
+      <div class="footer__navigation">
+        <a class="footer__logo" href="#">
+          <img src="./img/logo.png" width="52" height="52" alt="логотип Internship">
+        </a>
+        <ul class="footer__navigation-list">
+          <li class="footer__navigation-item">
+            <a href="#about">О проекте</a>
+          </li>
+          <li class="footer__navigation-item">
+            <a href="#programs">Программы</a>
+          </li>
+          <li class="footer__navigation-item">
+            <a href="#grant">Как поехать</a>
+          </li>
+          <li class="footer__navigation-item">
+            <a href="#reviews">Отзывы</a>
+          </li>
+          <li class="footer__navigation-item">
+            <a href="#news">Новости</a>
+          </li>
+          <li class="footer__navigation-item">
+            <a href="#contacts">Контакты</a>
+          </li>
+        </ul>
+      </div>
+      <ul class="footer__socials-list">
+        <li class="footer__socials-item">
+          <a href="#" aria-label="Мы Вконтакте">
+            <svg width="12" height="7">
+              <use href="/__spritemap#sprite-icon-vk"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="footer__socials-item">
+          <a href="#" aria-label="Мы Одноклассниках">
+            <svg width="7" height="12">
+              <use href="/__spritemap#sprite-icon-ok"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="footer__socials-item">
+          <a href="#" aria-label="Мы в Reddit">
+            <svg width="11" height="11">
+              <use href="/__spritemap#sprite-icon-reddit"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <div class="footer__copyrights-box">
+        <p class="footer__privacy-policy">Политика конфиденциальности</p>
+        <p class="footer__copy">Стажировка &copy; 2023 Все права защищены</p>
+      </div>
+    </div>
+  </footer>
   <script type="module" src="js/main.js"></script>
 </body>
 
 </html>
-
-<!-- пример использования спрайта -->
-<!-- <img src="/__spritemap#sprite-logo-view" alt="Это спрайт">
-    <svg>
-      <use href="/__spritemap#sprite-user"></use>
-    </svg> -->

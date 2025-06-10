@@ -1,0 +1,120 @@
+.faq {
+  width: 100%;
+  background-color: var(--additional-color, additional-color);
+}
+
+.faq__wrapper {
+  margin: 0 auto;
+  min-width: 320px;
+  padding: 50px 15px;
+  box-sizing: border-box;
+}
+
+.faq__title {
+  @include font ($primary-font, 20px, 20px, 400);
+
+  margin: 0;
+  margin-bottom: 30px;
+  color: var(--accent-color, $accent-color);
+  text-align: center;
+}
+
+.faq__accordion-container {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 10px;
+}
+
+.faq__item {
+  padding: 22px 17px;
+  outline: 2px solid var(--accent-color, $accent-color);
+  border-radius: 14px;
+}
+
+.faq__item[open] {
+  background-color: var(--accent-color, $accent-color);
+}
+
+.faq__item-title {
+  @include list-style;
+  @include font ($primary-font, 16px, 18px, 400);
+
+  position: relative;
+  padding-right: 40px;
+  min-height: 40px;
+  color: var(--accent-color, $accent-color);
+  box-sizing: border-box;
+
+  &::before {
+    position: absolute;
+    content: " ";
+    display: block;
+    width: 18px;
+    height: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 11px;
+    background-image: url("/__spritemap#sprite-plus-view");
+    background-repeat: no-repeat;
+    z-index: 1;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background-color: var(--accent-color, $accent-color);
+    border-radius: 50%;
+  }
+}
+
+.faq__item[open] .faq__item-title {
+  margin-bottom: 20px;
+  color: var(--secondary-color, $secondary-color);
+
+  &::before {
+    background-image: url("/__spritemap#sprite-minus-view");
+    top: 28px;
+  }
+
+  &::after {
+    background-color: var(--secondary-color, $secondary-color);
+  }
+}
+
+.faq__description-box p {
+  @include font ($primary-font, 14px, 20px, 400);
+
+  margin: 0;
+  color: var(--additional-color, $additional-color);
+}
+
+@media (min-width: $tablet-width) and (width <= 1439px) {
+  .faq__wrapper {
+    padding: 50px 45px;
+  }
+
+  .faq__title {
+    margin-bottom: 40px;
+    font-size: 34px;
+    line-height: 50px;
+  }
+
+  .faq__item {
+    padding: 32px;
+  }
+
+  .faq__item-title {
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  .faq__description-box p {
+    font-size: 16px;
+  }
+}

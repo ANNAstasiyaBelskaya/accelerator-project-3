@@ -1,9 +1,12 @@
 .page-header {
+  flex-grow: 0;
+  flex-shrink: 0;
   position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
   box-sizing: border-box;
   background-color: transparent;
   z-index: 2;
@@ -13,15 +16,35 @@
   display: block;
 }
 
-.page-header__menu-button {
+.page-header .page-header__menu-button {
+  position: relative;
   padding: 20px 71px 20px 21px;
+  display: grid;
+  place-items: center;
+  border: none;
+  border-radius: 30px;
   font-size: 14px;
   line-height: 14px;
   letter-spacing: 0.28px;
+  outline: 1px solid var(--accent-color, $accent-color);
+  background-color: var(--secondary-color, $secondary-color);
+  color: var(--accent-color, $accent-color);
+  text-transform: uppercase;
+  transition: width 0.6s ease-in-out;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    display: block;
+  }
 
   &::before {
     width: 46px;
     height: 46px;
+    right: 5px;
+    border-radius: 50%;
+    background-color: var(--accent-color, $accent-color);
   }
 
   &::after {
@@ -35,12 +58,13 @@
 .page-header__menu-button.opened {
   position: fixed;
   justify-content: start;
-  width: 290px;
+  width: 286px;
   margin-bottom: 4px;
   right: 15px;
   color: var(--secondary-color, $secondary-color);
   background-color: var(--accent-color, $accent-color);
   z-index: 2;
+  transition: width 0.6s ease-in-out;
 
   &::before {
     background-color: var(--secondary-color, $secondary-color);
@@ -56,7 +80,10 @@
 
 .page-header__navigation {
   position: fixed;
-  display: none;
+  top: 78px;
+  right: 15px;
+  opacity: 0;
+  transition: opacity 0.6s ease;
 }
 
 .page-header__navigation.opened {
@@ -69,7 +96,9 @@
   box-sizing: border-box;
   background-color: var(--accent-color, $accent-color);
   border-radius: 16px;
+  opacity: 1;
   z-index: 2;
+  transition: opacity 0.6s ease;
 }
 
 .page-header__overlay-container {
@@ -91,8 +120,11 @@
 
 @media (min-width: $mobile-width) and (width <= 767px) {
   .page-header {
-    width: 320px;
     padding: 20px 15px;
+  }
+
+  .page-header__menu-button.opened {
+    width: 290px;
   }
 
   .page-header__navigation.opened {
@@ -100,3 +132,17 @@
   }
 }
 
+@media (min-width: $tablet-width) and (width <= 1439px) {
+  .page-header {
+    padding: 30px 45px;
+  }
+
+  .page-header__navigation.opened {
+    top: 88px;
+    right: 45px;
+  }
+
+  .page-header__menu-button.opened {
+    right: 45px;
+  }
+}

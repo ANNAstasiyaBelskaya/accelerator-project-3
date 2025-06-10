@@ -1,14 +1,18 @@
 .grant {
-  margin: 0 auto;
-  padding: 70px 15px;
-  width: 320px;
+  width: 100%;
   color: var(--secondary-color, $secondary-color);
   background-color: var(--accent-color, $accent-color);
+}
+
+.grant__wrapper {
+  padding: 70px 15px;
+  margin: 0 auto;
+  min-width: 320px;
   box-sizing: border-box;
 }
 
 .grant__title {
-  @include font (20px, 20px, 400);
+  @include font ($primary-font, 20px, 20px, 400);
 
   margin: 0;
   margin-bottom: 15px;
@@ -26,14 +30,14 @@
   margin-bottom: 30px;
 
   p {
-    @include font (14px, 20px, 400);
+    @include font ($primary-font, 14px, 20px, 400);
 
     margin: 0;
   }
 }
 
 .grant__features-description {
-  @include font (18px, 22px, 400);
+  @include font ($primary-font, 18px, 22px, 400);
 
   margin: 0;
   margin-bottom: 15px;
@@ -71,7 +75,54 @@
 }
 
 .grant__features-item-description {
-  @include font (14px, 20px, 400);
+  @include font ($primary-font, 14px, 20px, 400);
 
   margin: 0;
+}
+
+@media (min-width: $tablet-width) and (width <= 1439px) {
+  .grant__wrapper {
+    padding: 100px 45px;
+  }
+
+  .grant__title {
+    font-size: 34px;
+    line-height: 50px;
+    margin-bottom: 30px;
+  }
+
+  .grant__info-container img {
+    margin-bottom: 40px;
+  }
+
+  .grant__description-container {
+    margin-bottom: 40px;
+
+    p {
+      width: 498px;
+      font-size: 16px;
+    }
+  }
+
+  .grant__features-description {
+    margin-bottom: 20px;
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  .grant__features-list {
+    padding: 15px 0 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px 28px;
+  }
+
+  .grant__features-item {
+    position: relative;
+    padding: 31px 26px;
+  }
+
+  .grant__features-item-description {
+    font-size: 16px;
+  }
 }
